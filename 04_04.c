@@ -33,7 +33,7 @@ int main(void)
  return 0;
 */
   // verifica se o número digitado é negativo ou positivo
-  int numero = 0;
+ /* int numero = 0;
   printf("Digite um numero inteiro bem legal: ");
   scanf("%d", &numero);
   if (numero < 0)
@@ -45,4 +45,29 @@ int main(void)
     printf("O numero e positivo");
   }
     return 0;
+    */
+   double nota1 = 0, nota2 = 0, nota3 = 0, media = 0;
+
+   printf("Digite nota 1 ");
+   scanf("%lf", &nota1);
+   printf("Digite nota 2 ");
+   scanf("%lf", &nota2);
+   printf("Digite nota 3 ");
+   scanf("%lf", &nota3);
+
+  media = (nota1 + nota2 + nota3) / 3;
+  printf("A media e %g \n", media);
+
+  if(media < 4) {
+    printf("Reprovado");
+  }  else{
+    if(media  < 7) {
+      printf("Prova final.");
+    }  else{
+      printf("Aprovado");
+    }
+  }
+    
+
+     
 }
