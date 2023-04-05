@@ -7,9 +7,9 @@ int main(void) {
     printf("Digite o numero B: ");
     scanf("%d", &numero_b);
     if(numero_a > numero_b) {
-        printf("%d", &numero_a);
+        printf("%d", numero_a);
     } else {
-        printf("%d", &numero_b);
+        printf("%d", numero_b);
 
     }
 }
