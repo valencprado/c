@@ -10,7 +10,7 @@ int main(void) {
   int idade = ano - ano_nascimento;
   int tempo_trabalho = ano - ano_ingresso;
 
-  printf("Idade = %d Tempo de trabalho = %d\n", idade, tempo_trabalho);
+  printf("Idade = %d\n", idade);
   printf("Tempo de trabalho = %d\n", tempo_trabalho);
   if (idade >= 65 || tempo_trabalho >= 30) {
     printf("Requerer aposentadoria");
