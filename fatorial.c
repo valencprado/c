@@ -7,15 +7,13 @@ ordem decrescente, 4 * 3 * 2 * 1. Multiplicar por 1 é opcional, mas tem que
 funcionar também para o fatorial de zero, que é igual a 1.
 */
 int main(void) {
-  int numero = 0,fatorial = 0;
+  int numero = 0,fatorial = 1, contador = 1;
   printf("Digite N: ");
   scanf("%d", &numero);
-    int decrementador = numero;
 
-    while(decrementador != 0) {
-    
-  decrementador--;
-  printf("%d", decrementador);
+    while(contador <= numero) {
+      fatorial = fatorial * contador;
+      contador++;
 
     }
   

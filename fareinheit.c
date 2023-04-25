@@ -8,16 +8,14 @@ temperatura em graus Fahrenheit, calcule o equivalente em graus Celsius e o impr
   Confira os exemplos antes de montar seus prints.
 */
 int main(void) {
-  int grausF = 0, grausC = 0;
-    printf("Graus F: \n");
-    scanf("%d", &grausF);
-        grausC = (grausF - 32) * 5/9;
+  double grausF = 0, grausC = 0;
+  printf("Graus F: ");
+  scanf("%lf", &grausF);
 
-    while(grausF != 0) {
-    printf("%d", grausC);
-    printf("Graus F: \n");
-    scanf("%d", &grausF);
-    }
-    
-
+  while (grausF > -459.67) {
+    grausC = (grausF - 32) * 5 / 9;
+    printf("%g\n", grausC);
+    printf("Graus F: ");
+    scanf("%lf", &grausF);
+  }
 }
