@@ -1,12 +1,41 @@
 #include <stdio.h>
-/*
-Construa um programa que pergunte a idade e altura de uma turma de alunos, terminando quando for digitada uma idade igual a zero. Use alturas em metros. O programa deve imprimir três frases em linhas distintas:
-a)      "A classe tem %d alunos"
-b)      "A idade media dos alunos com menos de 1,70m de altura e' %g". Se não houver alunos nessa condição, deverá ser impresso "Nao ha' alunos com menos de 1,70m de altura".
-c)       "A altura media dos alunos com mais de 20 anos e' %g". Se não houver alunos nessa condição, deverá ser impresso "Nao ha' alunos com mais de 20 anos".
-
-Dica: guarde as somas e quantidades e deixe para calcular as médias no final. Confira os exemplos.
-*/
 int main(void) {
-  
+  int idade;
+  double altura, soma_1, soma_2;
+  int alunos_20 = 0, alunos_170 = 0, alunos = 0;
+  printf("Idade: ");
+  scanf("%d", &idade);
+  printf("Altura: ");
+  scanf("%lf", &altura);
+  while (idade != 0 && altura != 0) {
+    if(idade == 0) {
+      break;
+    }
+    if (idade > 20) {
+      soma_1 += altura;
+      alunos_20++;
+    }
+    if (altura < 1.7) {
+      soma_2 += idade;
+      alunos_170++;
+    }
+    printf("Idade: ");
+  scanf("%d", &idade);
+  printf("Altura: ");
+  scanf("%lf", &altura);
+    alunos++;
+  }
+  double media_1 = soma_1 / alunos_20;
+  double media_2 = soma_2 / alunos_170;
+  printf("A classe tem %d alunos \n", alunos);
+  if (alunos_170 == 0) {
+    printf("Nao ha' alunos com menos de 1,70m de altura \n");
+  } else {
+    printf("A idade media dos alunos com menos de 1,70m de altura e' %.2f \n",
+           media_2);
+  }
+  if (alunos_20 == 0) {
+    printf("Nao ha' alunos com mais de 20 anos \n");
+  }
+  printf("A altura media dos alunos com mais de 20 anos e' %.2f \n", media_1);
 }
